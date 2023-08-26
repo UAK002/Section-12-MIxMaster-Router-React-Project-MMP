@@ -30,17 +30,17 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
-        children: [
-          {
-            // path: 'company',
-            index: true,
-            element: <h2>our company</h2>,
-          },
-          {
-            path: 'person',
-            element: <h2>John doe</h2>,
-          },
-        ],
+        // children: [
+        //   {
+        //     // path: 'company',
+        //     index: true,
+        //     element: <h2>our company</h2>,
+        //   },
+        //   {
+        //     path: 'person',
+        //     element: <h2>John doe</h2>,
+        //   },
+        // ],
       },
     ],
   },
