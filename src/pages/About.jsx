@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <Link to="/">Home Page</Link>
+      {/* <Link to="/">Home Page</Link> */}
       {/* <a href="https://johnsmilga.com/">best web dev courses</a> */}
       {/* <Outlet /> */}
     </div>
