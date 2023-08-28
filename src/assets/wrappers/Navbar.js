@@ -72,12 +72,12 @@ const Wrapper = styled.nav`
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
-    .nav-link {
-      color: var(--grey-900);
-      padding: 0.5rem 0.5rem 0.5rem 0;
-      transition: var(--transition);
-      letter-spacing: 2px;
-    }
+  }
+  .nav-link {
+    color: var(--grey-900);
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    transition: var(--transition);
+    letter-spacing: 2px;
   }
   .nav-link:hover {
     color: var(--primary-500);

@@ -8,7 +8,6 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className="nav-center">
-        {/* <StyledBtn>styled btn</StyledBtn> */}
         <span className="logo">MixMaster</span>
         <div className="nav-links">
           <NavLink to="/" className="nav-link">
