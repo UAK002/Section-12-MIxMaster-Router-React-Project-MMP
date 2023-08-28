@@ -4,17 +4,9 @@ import styled from 'styled-components';
 
 import Wrapper from '../assets/wrappers/Navbar';
 
-// const StyledBtn = styled.button`
-//   background: red;
-//   color: white;
-//   font-size: 2rem;
-//   padding: 1rem;
-// `;
-
 const Navbar = () => {
   return (
     <Wrapper>
-      {/* <nav> */}
       <div className="nav-center">
         {/* <StyledBtn>styled btn</StyledBtn> */}
         <span className="logo">MixMaster</span>
@@ -30,13 +22,8 @@ const Navbar = () => {
           </NavLink>
         </div>
       </div>
-      {/* </nav> */}
     </Wrapper>
   );
 };
-
-// const Wrapper = styled.nav`
-//   background: red;
-// `;
 
 export default Navbar;

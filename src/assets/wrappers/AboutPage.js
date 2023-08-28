@@ -1,3 +1,15 @@
+// import styled from 'styled-components';
+
+// const Wrapper = styled.div`
+//   p {
+//     line-height: 2;
+//     color: var(--grey-500);
+//     margin-top: 2rem;
+//   }
+// `;
+
+// export default Wrapper;
+
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -7,5 +19,4 @@ const Wrapper = styled.div`
     margin-top: 2rem;
   }
 `;
-
 export default Wrapper;
