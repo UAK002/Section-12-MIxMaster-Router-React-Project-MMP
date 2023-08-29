@@ -21,12 +21,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
-        // errorElement: <h2>something went wrong..</h2>,
         errorElement: <SinglePageError />,
         loader: landingLoader,
       },
       {
-        path: 'cocktail',
+        path: 'cocktail/:id',
         element: <Cocktail />,
       },
       {
@@ -36,17 +35,6 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
-        // children: [
-        //   {
-        //     // path: 'company',
-        //     index: true,
-        //     element: <h2>our company</h2>,
-        //   },
-        //   {
-        //     path: 'person',
-        //     element: <h2>John doe</h2>,
-        //   },
-        // ],
       },
     ],
   },
