@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         path: 'cocktail/:id',
         element: <Cocktail />,
       },
+
       {
         path: 'newsletter',
         element: <Newsletter />,
