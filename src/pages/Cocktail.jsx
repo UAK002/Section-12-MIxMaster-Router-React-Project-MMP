@@ -8,7 +8,7 @@ const singleCocktailUrl =
 export const loader = async ({ params }) => {
   const { id } = params;
   const { data } = await axios.get(`${singleCocktailUrl}${id}`);
-  console.log(data);
+  // console.log(data);
   return { id, data };
 };
 
@@ -16,7 +16,7 @@ const Cocktail = () => {
   const { id, data } = useLoaderData();
 
   const singleDrink = data.drinks[0];
-  // console.log(singleDrink);
+  console.log(singleDrink);
 
   const {
     strDrink: name,
@@ -26,6 +26,13 @@ const Cocktail = () => {
     strGlass: glass,
     strInstructions: instructions,
   } = singleDrink;
+
+  const validIngredients = Object.keys(singleDrink)
+    .filter(
+      (key) => key.startsWith('strIngredient') && singleDrink[key] !== null
+    )
+    .map((key) => singleDrink[key]);
+  console.log(validIngredients);
 
   return (
     <Wrapper>
@@ -53,6 +60,16 @@ const Cocktail = () => {
           <p>
             <span className="drink-data">glass :</span>
             {glass}
+          </p>
+          <p>
+            <span className="drink-data">ingredients :</span>
+            {validIngredients.map((item, index) => {
+              return (
+                <span className="ing" key={item}>
+                  {item} {index < validIngredients.length - 1 ? ',' : ''}
+                </span>
+              );
+            })}
           </p>
           <p>
             <span className="drink-data">instructions :</span>
