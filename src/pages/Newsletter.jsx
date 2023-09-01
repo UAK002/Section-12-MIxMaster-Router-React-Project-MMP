@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <form className="form">
+    <form className="form" method="POST">
       <h4 style={{ textAlign: 'center', marginBottom: '3rem' }}>
         our newsletter
       </h4>
