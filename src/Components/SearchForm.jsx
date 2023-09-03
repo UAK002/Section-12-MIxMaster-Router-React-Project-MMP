@@ -7,7 +7,7 @@ const SearchForm = ({ searchTerm }) => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <Wrapper>
-      <Form>
+      <Form className="form">
         <input
           type="search"
           className="form-input"
