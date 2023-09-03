@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import axios from 'axios';
 import CocktailList from '../Components/CocktailList';
 
+import SearchForm from '../Components/SearchForm';
+
 const cocktailSearchUrl =
   'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 // 'https://www.thecocktaildb.com/apissss/json/v1/1/search.php?s=';
@@ -21,6 +23,7 @@ const Landing = () => {
 
   return (
     <>
+      <SearchForm />
       <CocktailList drinks={drinks} />
     </>
   );
