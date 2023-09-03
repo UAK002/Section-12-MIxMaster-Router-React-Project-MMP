@@ -38,6 +38,7 @@ const router = createBrowserRouter([
         path: 'newsletter',
         element: <Newsletter />,
         action: newsletterAction,
+        errorElement: <SinglePageError />,
       },
       {
         path: 'about',
