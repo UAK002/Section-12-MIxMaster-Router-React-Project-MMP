@@ -9,9 +9,10 @@ const cocktailSearchUrl =
   'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 // 'https://www.thecocktaildb.com/apissss/json/v1/1/search.php?s=';
 
-export const loader = async () => {
-  const searchTerm = '';
-  // const searchTerm = 'sss';
+export const loader = async ({ request }) => {
+  console.log(request);
+  const url = new URL(request.url);
+  const searchTerm = url.searchParams.get('search') || '';
   const response = await axios.get(`${cocktailSearchUrl}${searchTerm}`);
 
   return { drinks: response.data.drinks, searchTerm };
@@ -19,11 +20,12 @@ export const loader = async () => {
 
 const Landing = () => {
   const { drinks, searchTerm } = useLoaderData();
-  console.log(drinks);
+  // console.log(drinks);
+  // console.log(searchTerm);
 
   return (
     <>
-      <SearchForm />
+      <SearchForm searchTerm={searchTerm} />
       <CocktailList drinks={drinks} />
     </>
   );
